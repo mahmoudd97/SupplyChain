@@ -1,0 +1,22 @@
+SELECT *
+FROM orders
+join order_item
+on orders.Order_Id = order_item.Order_Id
+join shipping 
+on shipping.Order_Id =orders.Order_Id
+join product 
+on product.Product_Card_Id = order_item.Product_Card_Id
+join category
+on category.Category_Id=product.Product_Category_Id
+**************************************************************
+**************************************************************
+SELECT orders.Order_Date,shipping.Shipping_Date,shipping.Days_for_shipping_real,shipping.Days_for_shipment_scheduled
+FROM orders
+join order_item
+on orders.Order_Id = order_item.Order_Id
+join shipping 
+on shipping.Order_Id =orders.Order_Id
+join product 
+on product.Product_Card_Id = order_item.Product_Card_Id
+join category
+on category.Category_Id=product.Product_Category_Id
